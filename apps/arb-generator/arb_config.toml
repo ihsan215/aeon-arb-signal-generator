@@ -1,0 +1,45 @@
+# ─────────────────────────────────────────────
+# Global Settings
+# ─────────────────────────────────────────────
+
+# How many times to retry a WebSocket connection before giving up
+reconnect_attempts = 10
+
+# Delay in milliseconds between each reconnect attempt
+reconnect_delay_ms = 5000
+
+# Minimum profit threshold to act on an opportunity (in base asset)
+# 0.0 means log/evaluate all opportunities regardless of profit
+min_usdt_profit = 0.00001
+
+
+# =========================
+# Exchange Configuration - Binance
+# =========================
+
+[[exchanges]]
+name = "binance"
+enabled = true   # Enable/disable this exchange connection
+
+# List of tradable pairs for Binance
+[[exchanges.pairs]]
+symbol = "ETH/USDT" # Ethereum vs USDT spot pair
+
+[[exchanges.pairs]]
+symbol = "BTC/USDT" # Bitcoin vs USDT spot pair
+
+
+# =========================
+# Exchange Configuration - Bybit
+# =========================
+
+[[exchanges]]
+name = "bybit"
+enabled = true # If false, WS connection will not be started
+
+# Supported pairs for Bybit
+[[exchanges.pairs]]
+symbol = "ETH/USDT" # Common arbitrage pair with Binance
+
+[[exchanges.pairs]]
+symbol = "SOL/USDT" # Solana pair (not always available on all exchanges)
