@@ -2,6 +2,8 @@
     "name": "arb-generator",
     "scripts": {
     "dev": "cargo watch -x run",
-    "build": "cargo build"
+    "build": "cargo build",
+    "lint": "cargo clippy",
+    "check-types": "cargo check"
   }
 }

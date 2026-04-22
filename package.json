@@ -3,6 +3,8 @@
   "private": true,
   "scripts": {
     "build": "turbo run build",
+    "arb-generator:dev": "turbo run dev --filter=arb-generator",
+    "arb-generator:build": "turbo run build --filter=arb-generator",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
